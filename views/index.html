@@ -292,7 +292,11 @@ $ git push</pre>
                     <div class="code"><h3>DB Connection Info:</h3>
                       <table style='margin-left: 20px'>
                           <tr><td>Type:</td><td><%= dbInfo.type %></td></tr>
+                        <% if (dbInfo.url) { %>
                           <tr><td>URL:</td><td><%= dbInfo.url %></td></tr>
+                        <% } else { %>
+                          <tr><td>Database:</td><td><%= dbInfo.databaseName %></td></tr>
+                        <%} %>
                       </table>
                     </div>
                 <% } else { %>
