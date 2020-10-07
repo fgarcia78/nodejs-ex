@@ -48,6 +48,8 @@ if (mongoURL == null) {
     mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
     mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
   }
+} else {
+    mongoURLLabel = mongoURL;
 }
 var db = null,
     dbDetails = new Object();
